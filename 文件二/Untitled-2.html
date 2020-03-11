@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>第二个网页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+<script src="index.js"></script>
+<div class ="blog-post">
+
+    <div v-html="content"></div>
+    <blog-post
+  v-for="post in posts"
+  v-bind:key="post.id"
+  v-bind:post="post"
+></blog-post>
+<alert-box>
+        Something bad happened.
+      </alert-box>
+</div>
+<template id="model"> 
+  <div> 
+    <p>我是model组件的内容</p>
+   </div> 
+</template> 
+<div id="app"> 
+  <p>我是段落一</p> 
+  <p>我是段落二</p> 
+</div>
+<div id = "app-2">
+  <span v-bind :title = "message">
+    鼠标悬停查看隐藏内容
+  </span>
+
+</div>
+
+
+</body>
+</html>
